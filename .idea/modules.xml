@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../APPNODEJS/.idea/APPNODEJS.iml" filepath="$PROJECT_DIR$/../APPNODEJS/.idea/APPNODEJS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TUTODJANGO.iml" filepath="$PROJECT_DIR$/.idea/TUTODJANGO.iml" />
+    </modules>
+  </component>
+</project>
