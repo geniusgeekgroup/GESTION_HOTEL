@@ -19,24 +19,13 @@ from django.conf.urls import url
 from django.urls import include, path
 # from rest_framework import routers
 from rest_framework.routers import DefaultRouter
-from restErp.views import ProduitViewset, SupplierViewset
 
 # router = routers.DefaultRouter()
-router = DefaultRouter()
-router.register(r'produit', ProduitViewset)
-router.register(r'supplier', SupplierViewset)
 
 # app_name = 'store'
 urlpatterns = [
-    path('Tutoapp/', include('tutoapp.urls')),
-    path('Polls/', include('polls.urls')),
-    path('Rest/', include('restErp.urls')),
-    path('Artci/', include('ARTCI.urls')),
-    path('disquaire/', include('disquaire.urls')),
-    path('store/', include('store.urls')),
     path('admin/', admin.site.urls),
-    url(r'^store/', include(('store.urls', 'store'), namespace="store")),
-    url(r'^GesHotel/', include(('GesHotel.urls', 'GesHotel'), namespace="GesHotel")),
+    path('', include(('GesHotel.urls', 'GesHotel'), namespace="GesHotel")),
     # ajouter le name space au cas ou il a plusieur
     #  applicatons
 

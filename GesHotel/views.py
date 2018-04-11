@@ -12,4 +12,4 @@ def acceuil(request):
             <p> SAINT FOUTRIER ONESYME DEVELOPPEUR PYTHON DJANGO ! </p>
 
        """
-    return HttpResponse(text)
+    return render(request, "GesHotel/index.html", {})

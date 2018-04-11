@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'GesHotel',
     'debug_toolbar',
+    'webpack_loader'
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,21 @@ MIDDLEWARE = [
 
 ]
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'webpack_bundles/', # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
+    }
+}
 
 
 INTERNAL_IPS = ['127.0.0.1']
@@ -126,3 +142,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,"static_root")

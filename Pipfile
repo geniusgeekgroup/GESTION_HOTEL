@@ -1,0 +1,22 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+django = "*"
+djangorestframework = "*"
+django-debug-toolbar = "*"
+django-webpack-loader = "*"
+
+
+[requires]
+
+python_version = "3.5"
+
+
+[dev-packages]
+

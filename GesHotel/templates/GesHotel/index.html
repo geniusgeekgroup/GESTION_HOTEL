@@ -1,0 +1,20 @@
+{%  load static %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% render_bundle 'manifest' 'css' %}
+    {% render_bundle 'vendor' 'css' %}
+    {% render_bundle 'app' 'css' %}
+</head>
+<body>
+
+    <div id="app" ></div>
+{% render_bundle 'manifest' 'js' %}
+{% render_bundle 'vendor' 'js' %}
+{% render_bundle 'app' 'js' %}
+</body>
+</html>
